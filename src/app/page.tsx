@@ -1,69 +1,36 @@
 import Image from "next/image";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
+type Project = {
+  title: string;
+  demoUrl?: string;
+  codeUrl: string;
+  image: string;
+  description: string;
+  label?: string;
+};
+
+const projects: Project[] = [
+  { title: "Registro Financiero", demoUrl: "https://gestion-de-gastos-ten.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/Gestion-de-gastos", image: "/preview-0.svg", description: "App full-stack de gestión financiera personal — gastos e ingresos por categorías, con auth JWT.", label: "Proyecto" },
+  { title: "API eCommerce (Jamby)", demoUrl: "https://ecommerce-jcjunior-cardenas.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/ecommerce-jcjunior-cardenas", image: "/preview-1.svg", description: "Tienda online de zapatillas urbanas con REST API, roles Admin/User y tests con Jest." },
+  { title: "El Vasco — Turnos", demoUrl: "https://barberia-turnos-chi.vercel.app/", codeUrl: "#", image: "/preview-2.svg", description: "Sistema de reservas de turnos online para barbería, con experiencia tipo app (PWA)." },
+  { title: "TrackiFly", demoUrl: "https://front-tracki-fly-zts5-n0y0lh2ds-trackifly-apps-projects.vercel.app/es", codeUrl: "https://github.com/JCJuniorCardenas/Back-TrackiFly", image: "/preview-3.svg", description: "Plataforma logística y de envíos. Backend con perfiles, pedidos masivos, tiempo real, Mercado Pago y auth dual.", label: "Proyecto colaborativo" },
+];
+
+const tags = ["NestJS", "TypeScript", "PostgreSQL", "Next.js", "JWT"];
+
+const getProjectImage = (project: Project) => project.demoUrl
+  ? `https://api.microlink.io/?url=${encodeURIComponent(project.demoUrl)}&screenshot=true&meta=false&embed=screenshot.url`
+  : project.image;
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
-}
+  return <main>
+    <nav className="nav"><a className="logo" href="#inicio">JCD<span>.</span></a><div className="nav-links"><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="#stack">Stack</a><a href="#contacto">Contacto</a></div><a className="nav-cta" href="mailto:juliocesar45941285@gmail.com">Disponible →</a></nav>
+    <section id="inicio" className="hero section-wrap"><p className="hero-name">Julio César Deglise Cárdenas</p><h1>Full Stack<br /><em>Developer</em></h1><div className="hero-bottom"><a className="arrow-link" href="#proyectos">Ver proyectos <span>↘</span></a></div></section>
+    <section id="experiencia" className="section-wrap section"><div className="section-heading"><span className="section-index">01 /</span><h2>Experiencia</h2><span className="rule" /></div><div className="about-grid"><p className="about-copy">Full Stack Developer con foco en backend, especializado en Node.js, NestJS y TypeScript. Experiencia construyendo APIs REST escalables, autenticación JWT, pagos e infraestructura cloud con AWS y Terraform.</p><div className="timeline"><article><span className="timeline-date">JUN 2026 — ACTUALIDAD</span><h3>Programador Full Stack <small>(Pasantía)</small></h3><p className="company">Nexa · Remoto</p><ul><li>Backend con Node.js/NestJS en equipo distribuido</li><li>AWS + Terraform (IaC) y Docker</li><li>Seguridad y escalabilidad</li></ul></article><article><span className="timeline-date">JUN 2026 — ACTUALIDAD</span><h3>Desarrollador Backend <small>(Pasantía)</small></h3><p className="company">Islas Frío</p><ul><li>Funcionalidades backend y APIs REST</li><li>Bases de datos y metodología ágil</li></ul></article><article className="secondary"><span className="timeline-date">2023 — 2024</span><h3>Asistente Administrativo</h3><p className="company">Hospital San José</p><p>Gestión de datos y documentación sensible en entornos de alto volumen.</p></article></div></div></section>
+    <section id="proyectos" className="section-wrap section"><div className="section-heading"><span className="section-index">02 /</span><h2>Proyectos seleccionados</h2><span className="rule" /></div><div className="projects-grid">{projects.map((project) => <article key={project.title} className="project-card"><a className="project-image" href={project.demoUrl ?? project.codeUrl} target="_blank" rel="noopener noreferrer"><Image src={getProjectImage(project)} alt={`Preview de ${project.title}`} fill sizes="(max-width: 768px) 100vw, 50vw" /></a><div className="project-content"><span className="project-label">{project.label ?? "Proyecto"}</span><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{tags.map((tag) => <span key={tag}>{tag}</span>)}</div><div className="project-actions">{project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">Ver Demo ↗</a>}<a href={project.codeUrl} target="_blank" rel="noopener noreferrer">Ver Código ↗</a></div></div></article>)}</div></section>
+    <section id="stack" className="section-wrap section"><div className="section-heading"><span className="section-index">03 /</span><h2>Stack técnico</h2><span className="rule" /></div><div className="stack-grid">{Object.entries({Backend:["Node.js","NestJS","Express","TypeScript","REST APIs","JWT","Bcrypt","Swagger/OpenAPI","Python"],Frontend:["Next.js","React","Tailwind CSS","HTML","CSS","JavaScript"],"Bases de datos":["PostgreSQL","TypeORM","Prisma","MongoDB"],"Cloud & DevOps":["AWS","Terraform","Docker","Cloudinary","Git","GitHub"],Integraciones:["Mercado Pago","Passport","Mailer SMTP"],Testing:["Jest","Postman"]}).map(([category,items]) => <div key={category}><h3>{category}</h3><div className="tags">{items.map((item) => <span key={item}>{item}</span>)}</div></div>)}</div></section>
+    <section id="educacion" className="section-wrap section education"><div className="section-heading"><span className="section-index">04 /</span><h2>Educación</h2><span className="rule" /></div><div className="education-list"><div><h3>Formación</h3><div className="education-entry"><strong>Tecnicatura en Programación</strong><span>Teclab Instituto Técnico Superior · MAR 2026 — DIC 2026</span></div><div className="education-entry"><strong>Full Stack Developer</strong><span>Henry · SEPT 2025 — ABR 2026</span></div></div><div><h3>Certificaciones</h3><div className="tags"><span>Desarrollo Web Full Stack · Henry</span><span>Graph Developer - Associate · Apollo GraphQL</span><span>JavaScript · Coderhouse</span></div><small className="cert-more">+3 certificaciones adicionales</small></div></div></section>
+    <footer id="contacto" className="footer section-wrap"><div><span className="section-index">05 / CONTACTO</span><h2>Construyamos algo<br /><em>que importe.</em></h2></div><div className="contact-links"><div className="contact-icons"><a className="contact-gmail" href="mailto:juliocesar45941285@gmail.com" aria-label="Email de Julio César"><SiGmail size={26} /></a><a className="contact-whatsapp" href="https://wa.me/5493772692892" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Julio César"><FaWhatsapp size={26} /></a><a className="contact-linkedin" href="https://www.linkedin.com/in/julio-c%C3%A9sar-junior-deglise-cardenas-3246b8296/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Julio César"><FaLinkedin size={26} /></a><a className="contact-github" href="https://github.com/JCJuniorCardenas" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Julio César"><FaGithub size={26} /></a></div></div></footer>
+  </main>;}
