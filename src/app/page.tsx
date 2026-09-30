@@ -12,6 +12,7 @@ type Project = {
 };
 
 const projects: Project[] = [
+  { title: "Team Acebal — Gestión de Academia", demoUrl: "https://frontend-beta-seven-77.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/team-acebal", image: "/preview-0.svg", description: "Plataforma multi-usuario para academias de artes marciales — alumnos, pagos y graduaciones con dashboard de vencimientos. Auth JWT, registro público con verificación por email y migraciones reales sobre PostgreSQL.", label: "Proyecto" },
   { title: "Registro Financiero", demoUrl: "https://gestion-de-gastos-ten.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/Gestion-de-gastos", image: "/preview-0.svg", description: "App full-stack de gestión financiera personal — gastos e ingresos por categorías, con auth JWT.", label: "Proyecto" },
   { title: "API eCommerce (Jamby)", demoUrl: "https://ecommerce-jcjunior-cardenas.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/ecommerce-jcjunior-cardenas", image: "/preview-1.svg", description: "Tienda online de zapatillas urbanas con REST API, roles Admin/User y tests con Jest." },
   { title: "El Vasco — Turnos", demoUrl: "https://barberia-turnos-chi.vercel.app/", codeUrl: "#", image: "/preview-2.svg", description: "Sistema de reservas de turnos online para barbería, con experiencia tipo app (PWA)." },
