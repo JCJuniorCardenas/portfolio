@@ -34,8 +34,6 @@ const stackCategories: Record<string, string[]> = {
   Testing: ["Jest", "Postman"],
 };
 
-const totalTechs = Object.values(stackCategories).reduce((sum, items) => sum + items.length, 0);
-
 const getProjectImage = (project: Project) => project.demoUrl
   ? `https://api.microlink.io/?url=${encodeURIComponent(project.demoUrl)}&screenshot=true&meta=false&embed=screenshot.url`
   : project.image;
@@ -47,13 +45,11 @@ export default function Home() {
     <section id="inicio" className="hero section-wrap">
       <p className="hero-name">Julio César Deglise Cárdenas</p>
       <h1>Full Stack<br /><em>Developer</em></h1>
-      <p className="hero-subtitle">Programo backends con NestJS, los conecto a una base de datos real y dejo la app funcionando en producción, no solo en mi máquina.</p>
       <div className="hero-bottom"><a className="arrow-link" href="#proyectos">Ver proyectos <span>↘</span></a></div>
     </section>
 
-    <Reveal as="section" className="stats-strip section-wrap">
+    <Reveal as="section" className="stats-strip stats-strip--two section-wrap">
       <StatCounter value={projects.length} label="Proyectos full-stack" />
-      <StatCounter value={totalTechs} label="Tecnologías en uso" />
       <StatCounter value={projects.filter((p) => p.demoUrl).length} label="Demos en producción" />
     </Reveal>
 
