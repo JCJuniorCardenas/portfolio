@@ -45,7 +45,10 @@ export default function Home() {
     <section id="inicio" className="hero section-wrap">
       <p className="hero-name">Julio César Deglise Cárdenas</p>
       <h1>Full Stack<br /><em>Developer</em></h1>
-      <div className="hero-bottom"><a className="arrow-link" href="#proyectos">Ver proyectos <span>↘</span></a></div>
+      <div className="hero-bottom">
+        <a className="arrow-link" href="#proyectos">Ver proyectos <span>↘</span></a>
+        <a className="arrow-link cv-link" href="/CV-Julio-Deglise-Cardenas.pdf" download>Descargar CV <span>↓</span></a>
+      </div>
     </section>
 
     <Reveal as="section" className="stats-strip stats-strip--two section-wrap">
