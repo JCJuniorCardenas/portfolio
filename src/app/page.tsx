@@ -15,14 +15,15 @@ type Project = {
   description: string;
   label?: string;
   tags: string[];
+  imagePosition?: string;
 };
 
 const projects: Project[] = [
-  { title: "Team Acebal — Gestión de Academia", demoUrl: "https://frontend-beta-seven-77.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/team-acebal", image: "/preview-0.svg", description: "Plataforma multi-usuario para academias de artes marciales — alumnos, pagos y graduaciones con dashboard de vencimientos. Auth JWT, registro público con verificación por email y migraciones reales sobre PostgreSQL.", label: "Proyecto", tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT", "React"] },
-  { title: "Registro Financiero", demoUrl: "https://gestion-de-gastos-ten.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/Gestion-de-gastos", image: "/preview-0.svg", description: "App full-stack de gestión financiera personal — gastos e ingresos por categorías, con auth JWT.", label: "Proyecto", tags: ["NestJS", "TypeScript", "PostgreSQL", "JWT"] },
-  { title: "API eCommerce (Jamby)", demoUrl: "https://ecommerce-jcjunior-cardenas.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/ecommerce-jcjunior-cardenas", image: "/preview-1.svg", description: "Tienda online de zapatillas urbanas con REST API, roles Admin/User y tests con Jest.", tags: ["Node.js", "Express", "MongoDB", "JWT", "Jest"] },
-  { title: "El Vasco — Turnos", demoUrl: "https://barberia-turnos-chi.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/barberia-turnos", image: "/preview-2.svg", description: "Sistema de reservas de turnos online para barbería, con experiencia tipo app (PWA).", tags: ["NestJS", "React", "PostgreSQL", "PWA"] },
-  { title: "TrackiFly", demoUrl: "https://front-tracki-fly-zts5-n0y0lh2ds-trackifly-apps-projects.vercel.app/es", codeUrl: "https://github.com/JCJuniorCardenas/Back-TrackiFly", image: "/preview-3.svg", description: "Plataforma logística y de envíos. Backend con perfiles, pedidos masivos, tiempo real, Mercado Pago y auth dual.", label: "Proyecto colaborativo", tags: ["NestJS", "TypeScript", "PostgreSQL", "Mercado Pago", "WebSockets"] },
+  { title: "Team Acebal — Gestión de Academia", demoUrl: "https://frontend-beta-seven-77.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/team-acebal", image: "/previews/team-acebal.jpg", imagePosition: "top", description: "Plataforma multi-usuario para academias de artes marciales — alumnos, pagos y graduaciones con dashboard de vencimientos. Auth JWT, registro público con verificación por email y migraciones reales sobre PostgreSQL.", label: "Proyecto", tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT", "React"] },
+  { title: "Registro Financiero", demoUrl: "https://gestion-de-gastos-ten.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/Gestion-de-gastos", image: "/previews/registro-financiero.jpg", imagePosition: "top", description: "App full-stack de gestión financiera personal — gastos e ingresos por categorías, con auth JWT.", label: "Proyecto", tags: ["NestJS", "TypeScript", "PostgreSQL", "JWT"] },
+  { title: "API eCommerce (Jamby)", demoUrl: "https://ecommerce-jcjunior-cardenas.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/ecommerce-jcjunior-cardenas", image: "/previews/jamby.jpg", imagePosition: "center 30%", description: "Tienda online de zapatillas urbanas con REST API, roles Admin/User y tests con Jest.", tags: ["Node.js", "Express", "MongoDB", "JWT", "Jest"] },
+  { title: "El Vasco — Turnos", demoUrl: "https://barberia-turnos-chi.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/barberia-turnos", image: "/previews/el-vasco.jpg", imagePosition: "center 70%", description: "Sistema de reservas de turnos online para barbería, con experiencia tipo app (PWA).", tags: ["NestJS", "React", "PostgreSQL", "PWA"] },
+  { title: "TrackiFly", demoUrl: "https://front-tracki-fly-zts5-n0y0lh2ds-trackifly-apps-projects.vercel.app/es", codeUrl: "https://github.com/JCJuniorCardenas/Back-TrackiFly", image: "/previews/trackifly.jpg", imagePosition: "top", description: "Plataforma logística y de envíos. Backend con perfiles, pedidos masivos, tiempo real, Mercado Pago y auth dual.", label: "Proyecto colaborativo", tags: ["NestJS", "TypeScript", "PostgreSQL", "Mercado Pago", "WebSockets"] },
 ];
 
 const stackCategories: Record<string, string[]> = {
@@ -33,10 +34,6 @@ const stackCategories: Record<string, string[]> = {
   Integraciones: ["Mercado Pago", "Passport", "Mailer SMTP"],
   Testing: ["Jest", "Postman"],
 };
-
-const getProjectImage = (project: Project) => project.demoUrl
-  ? `https://api.microlink.io/?url=${encodeURIComponent(project.demoUrl)}&screenshot=true&meta=false&embed=screenshot.url`
-  : project.image;
 
 export default function Home() {
   return <main>
@@ -74,7 +71,7 @@ export default function Home() {
         {projects.map((project, index) => (
           <Reveal as="article" className="project-card" delay={Math.min(index * 0.08, 0.32)} key={project.title}>
             <a className="project-image" href={project.demoUrl ?? project.codeUrl} target="_blank" rel="noopener noreferrer">
-              <Image src={getProjectImage(project)} alt={`Preview de ${project.title}`} fill sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image style={{ objectPosition: project.imagePosition ?? "center" }} src={project.image} alt={`Preview de ${project.title}`} fill sizes="(max-width: 768px) 100vw, 50vw" />
             </a>
             <div className="project-content">
               <span className="project-label">{project.label ?? "Proyecto"}</span>
