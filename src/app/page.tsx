@@ -6,6 +6,7 @@ import { SiGmail } from "react-icons/si";
 import { FloatingContact } from "../components/FloatingContact";
 import { Reveal } from "../components/Reveal";
 import { StatCounter } from "../components/StatCounter";
+import { WarmUp } from "../components/WarmUp";
 
 type Project = {
   title: string;
@@ -128,6 +129,7 @@ export default function Home() {
       </div>
     </Reveal>
 
+    <WarmUp />
     <FloatingContact />
   </main>;
 }
