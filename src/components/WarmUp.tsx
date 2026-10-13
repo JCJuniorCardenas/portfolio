@@ -2,11 +2,10 @@
 
 import { useEffect } from "react";
 
-// Los backends gratis de Render se duermen tras 15 min sin uso y tardan
+// Team Acebal está en Railway (no se duerme). Los backends gratis de Render se duermen tras 15 min sin uso y tardan
 // ~40 s en despertar. Al abrir el portfolio se les envía un ping en segundo
 // plano para que estén listos cuando alguien abra una demo.
 const BACKENDS = [
-  "https://team-acebal.onrender.com/health",
   "https://barberia-turnos-x1ih.onrender.com/",
   "https://gestion-de-gastos-gvho.onrender.com/",
 ];
