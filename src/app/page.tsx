@@ -6,7 +6,6 @@ import { SiGmail } from "react-icons/si";
 import { FloatingContact } from "../components/FloatingContact";
 import { Reveal } from "../components/Reveal";
 import { StatCounter } from "../components/StatCounter";
-import { WarmUp } from "../components/WarmUp";
 
 type Project = {
   title: string;
@@ -22,7 +21,7 @@ type Project = {
 const projects: Project[] = [
   { title: "Team Acebal — Gestión de Academia", demoUrl: "https://frontend-beta-seven-77.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/team-acebal", image: "/previews/team-acebal.jpg", imagePosition: "top", description: "Plataforma multi-usuario para academias de artes marciales — alumnos, pagos y graduaciones con dashboard de vencimientos. Auth JWT, registro público con verificación por email y migraciones reales sobre PostgreSQL.", label: "Proyecto", tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT", "React"] },
   { title: "Registro Financiero", demoUrl: "https://gestion-de-gastos-ten.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/Gestion-de-gastos", image: "/previews/registro-financiero.jpg", imagePosition: "top", description: "App full-stack de gestión financiera personal — gastos e ingresos por categorías, con auth JWT.", label: "Proyecto", tags: ["NestJS", "TypeScript", "PostgreSQL", "JWT"] },
-  { title: "API eCommerce (Jamby)", demoUrl: "https://ecommerce-jcjunior-cardenas.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/ecommerce-jcjunior-cardenas", image: "/previews/jamby.jpg", imagePosition: "center 30%", description: "Tienda online de zapatillas urbanas con REST API, roles Admin/User y tests con Jest.", tags: ["Node.js", "Express", "MongoDB", "JWT", "Jest"] },
+  { title: "API eCommerce (Jamby)", demoUrl: "https://ecommerce-jcjunior-cardenas.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/ecommerce-jcjunior-cardenas", image: "/previews/jamby.jpg", imagePosition: "center 30%", description: "Tienda online de zapatillas urbanas con REST API, roles Admin/User y tests con Jest.", tags: ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "JWT", "Jest"] },
   { title: "El Vasco — Turnos", demoUrl: "https://barberia-turnos-chi.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/barberia-turnos", image: "/previews/el-vasco.jpg", imagePosition: "center 70%", description: "Sistema de reservas de turnos online para barbería, con experiencia tipo app (PWA).", tags: ["NestJS", "React", "PostgreSQL", "PWA"] },
   { title: "TrackiFly", demoUrl: "https://front-tracki-fly-zts5.vercel.app/es", codeUrl: "https://github.com/JCJuniorCardenas/Back-TrackiFly", image: "/previews/trackifly.jpg", imagePosition: "top", description: "Plataforma logística y de envíos. Backend con perfiles, pedidos masivos, tiempo real, Mercado Pago y auth dual.", label: "Proyecto colaborativo", tags: ["NestJS", "TypeScript", "PostgreSQL", "Mercado Pago", "WebSockets"] },
 ];
@@ -129,7 +128,6 @@ export default function Home() {
       </div>
     </Reveal>
 
-    <WarmUp />
     <FloatingContact />
   </main>;
 }
