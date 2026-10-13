@@ -50,3 +50,11 @@ body{font-family:var(--font-space-grotesk),sans-serif}.nav-links,.nav-cta,.eyebr
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.8,.25,1),transform .7s cubic-bezier(.25,.8,.25,1);transition-delay:var(--delay,0s)}
 .reveal--visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* Selector de idioma */
+.nav-right{display:flex;align-items:center;gap:18px}
+.lang-switch{display:flex;gap:2px;font:11px 'DM Mono',monospace;letter-spacing:.06em}
+.lang-switch a{padding:6px 8px;color:#92958e;border:1px solid transparent;transition:color .2s,border-color .2s}
+.lang-switch a:hover{color:#c8ff43}
+.lang-switch a[aria-current="true"]{color:#c8ff43;border-color:#363a35}
+@media(max-width:700px){.nav-right{gap:10px}.nav-cta{padding:8px 10px}}

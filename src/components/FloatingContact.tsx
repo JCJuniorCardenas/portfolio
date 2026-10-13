@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { SiGmail } from "react-icons/si";
 
-export function FloatingContact() {
+export function FloatingContact({ label }: { label: string }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export function FloatingContact() {
       className={`floating-contact${visible ? " floating-contact--visible" : ""}`}
     >
       <SiGmail size={16} />
-      Hablemos
+      {label}
     </a>
   );
 }
