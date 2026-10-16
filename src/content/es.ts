@@ -9,7 +9,7 @@ export const es = {
   nav: { experience: "Experiencia", projects: "Proyectos", stack: "Stack", contact: "Contacto", cta: "Disponible →" },
   hero: { name: "Julio César Deglise Cárdenas", seeProjects: "Ver proyectos", downloadCv: "Descargar CV" },
   cvFile: "/CV-Julio-Deglise-Cardenas.pdf",
-  stats: { projects: "Proyectos full-stack", demos: "Demos en producción" },
+  stats: { projects: "Proyectos", demos: "Demos en producción" },
   experience: {
     heading: "Experiencia",
     about: "Full Stack Developer con foco en backend, especializado en Node.js, NestJS y TypeScript. Experiencia construyendo APIs REST escalables, autenticación JWT, pagos e infraestructura cloud con AWS y Terraform.",
@@ -21,6 +21,7 @@ export const es = {
   },
   projectsSection: { heading: "Proyectos seleccionados", demo: "Ver Demo ↗", code: "Ver Código ↗", previewOf: "Preview de", defaultLabel: "Proyecto" },
   projects: {
+    "whatsapp-bot": { title: "WhatsApp Bot con IA — Turnos", label: "Proyecto", description: "Bot de WhatsApp que agenda turnos entendiendo lenguaje natural con IA (Gemini). La IA propone y el código decide: reservar o cancelar exige un “sí” de la persona. Webhook de Meta con firma validada, evaluación reproducible de la IA y más de 200 tests." },
     "team-acebal": { title: "Team Acebal — Gestión de Academia", label: "Proyecto", description: "Plataforma multi-usuario para academias de artes marciales — alumnos, pagos y graduaciones con dashboard de vencimientos. Auth JWT, registro público con verificación por email y migraciones reales sobre PostgreSQL." },
     "registro-financiero": { title: "Registro Financiero", label: "Proyecto", description: "App full-stack de gestión financiera personal — gastos e ingresos por categorías, con auth JWT." },
     jamby: { title: "API eCommerce (Jamby)", label: "Proyecto", description: "Tienda online de zapatillas urbanas con REST API, roles Admin/User y tests con Jest." },

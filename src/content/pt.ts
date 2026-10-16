@@ -9,7 +9,7 @@ export const pt: Dict = {
   nav: { experience: "Experiência", projects: "Projetos", stack: "Stack", contact: "Contato", cta: "Disponível →" },
   hero: { name: "Julio César Deglise Cárdenas", seeProjects: "Ver projetos", downloadCv: "Baixar CV" },
   cvFile: "/CV-Julio-Deglise-Cardenas-PT.pdf",
-  stats: { projects: "Projetos full-stack", demos: "Demos em produção" },
+  stats: { projects: "Projetos", demos: "Demos em produção" },
   experience: {
     heading: "Experiência",
     about: "Full Stack Developer com foco em backend, especializado em Node.js, NestJS e TypeScript. Experiência construindo APIs REST escaláveis, autenticação JWT, pagamentos e infraestrutura em nuvem com AWS e Terraform. Português bilíngue, disponível para trabalho 100% remoto com equipes brasileiras e latino-americanas.",
@@ -21,6 +21,7 @@ export const pt: Dict = {
   },
   projectsSection: { heading: "Projetos selecionados", demo: "Ver Demo ↗", code: "Ver Código ↗", previewOf: "Prévia de", defaultLabel: "Projeto" },
   projects: {
+    "whatsapp-bot": { title: "Bot de WhatsApp com IA — Agendamentos", label: "Projeto", description: "Bot de WhatsApp que agenda horários entendendo linguagem natural com IA (Gemini). A IA propõe e o código decide: reservar ou cancelar exige um “sim” da pessoa. Webhook da Meta com assinatura validada, avaliação reprodutível da IA e mais de 200 testes." },
     "team-acebal": { title: "Team Acebal — Gestão de Academia", label: "Projeto", description: "Plataforma multiusuário para academias de artes marciais — alunos, pagamentos e graduações com dashboard de vencimentos. Autenticação JWT, cadastro público com verificação por e-mail e migrações reais sobre PostgreSQL." },
     "registro-financiero": { title: "Registro Financeiro", label: "Projeto", description: "App full-stack de gestão financeira pessoal — despesas e receitas por categorias, com autenticação JWT." },
     jamby: { title: "API eCommerce (Jamby)", label: "Projeto", description: "Loja online de tênis urbanos com REST API, perfis Admin/User e testes com Jest." },

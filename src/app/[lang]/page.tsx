@@ -52,7 +52,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           const text = t.projects[project.id];
           return (
             <Reveal as="article" className="project-card" delay={Math.min(index * 0.08, 0.32)} key={project.id}>
-              <a className="project-image" href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+              <a className="project-image" href={project.demoUrl ?? project.codeUrl} target="_blank" rel="noopener noreferrer">
                 <Image style={{ objectPosition: project.imagePosition }} src={project.image} alt={`${t.projectsSection.previewOf} ${text.title}`} fill sizes="(max-width: 768px) 100vw, 50vw" />
               </a>
               <div className="project-content">
@@ -61,7 +61,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 <p>{text.description}</p>
                 <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
                 <div className="project-actions">
-                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">{t.projectsSection.demo}</a>
+                  {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">{t.projectsSection.demo}</a>}
                   <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">{t.projectsSection.code}</a>
                 </div>
               </div>
