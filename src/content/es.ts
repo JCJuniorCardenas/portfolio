@@ -27,6 +27,7 @@ export const es = {
     jamby: { title: "API eCommerce (Jamby)", label: "Proyecto", description: "Tienda online de zapatillas urbanas con REST API, roles Admin/User y tests con Jest." },
     "el-vasco": { title: "El Vasco — Turnos", label: "Proyecto", description: "Sistema de reservas de turnos online para barbería, con experiencia tipo app (PWA)." },
     trackifly: { title: "TrackiFly", label: "Proyecto colaborativo", description: "Plataforma logística y de envíos. Backend con perfiles, pedidos masivos, tiempo real, Mercado Pago y auth dual." },
+    "palta-landing": { title: "Los 108 — Landing y tienda de paltas", label: "Proyecto", description: "Landing con animaciones al scroll, tienda de pedidos y panel de administración para un campo de paltas de Corrientes. El servidor valida precios y stock, y admite pago con Mercado Pago o transferencia. La demo usa productos y precios de ejemplo." },
   } as Record<ProjectId, { title: string; label: string; description: string }>,
   stack: {
     heading: "Stack técnico",

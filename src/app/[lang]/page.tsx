@@ -47,7 +47,10 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
     <section id="proyectos" className="section-wrap section">
       <div className="section-heading"><span className="section-index">02 /</span><h2>{t.projectsSection.heading}</h2><span className="rule" /></div>
-      <div className="projects-grid">
+      <div
+        className={`projects-grid${projectsBase.length % 2 ? " projects-grid--odd" : ""}`}
+        style={{ "--pairs": Math.floor(projectsBase.length / 2) } as React.CSSProperties}
+      >
         {projectsBase.map((project, index) => {
           const text = t.projects[project.id];
           return (

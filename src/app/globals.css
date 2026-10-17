@@ -58,3 +58,12 @@ body{font-family:var(--font-space-grotesk),sans-serif}.nav-links,.nav-cta,.eyebr
 .lang-switch a:hover{color:#c8ff43}
 .lang-switch a[aria-current="true"]{color:#c8ff43;border-color:#363a35}
 @media(max-width:700px){.nav-right{gap:10px}.nav-cta{padding:8px 10px}}
+
+/* Si la cantidad de proyectos es impar, el último ocupa todo el ancho (imagen a la izquierda).
+   Las filas de a pares siguen con la misma altura; la última se ajusta a su contenido. */
+@media(min-width:701px){
+.projects-grid--odd{grid-template-rows:repeat(var(--pairs),1fr) auto}
+.projects-grid--odd>.project-card:last-child{grid-column:1/-1;display:grid;grid-template-columns:1.15fr 1fr}
+.projects-grid--odd>.project-card:last-child .project-image{min-height:400px;border-bottom:0;border-right:1px solid #363a35}
+.projects-grid--odd>.project-card:last-child .project-content{align-self:center}
+}

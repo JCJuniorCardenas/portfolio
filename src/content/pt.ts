@@ -27,6 +27,7 @@ export const pt: Dict = {
     jamby: { title: "API eCommerce (Jamby)", label: "Projeto", description: "Loja online de tênis urbanos com REST API, perfis Admin/User e testes com Jest." },
     "el-vasco": { title: "El Vasco — Agendamentos", label: "Projeto", description: "Sistema de agendamento online para barbearia, com experiência de aplicativo (PWA)." },
     trackifly: { title: "TrackiFly", label: "Projeto colaborativo", description: "Plataforma de logística e envios. Backend com perfis, pedidos em massa, tempo real, Mercado Pago e autenticação dupla." },
+    "palta-landing": { title: "Los 108 — Landing e loja de abacates", label: "Projeto", description: "Landing com animações ao rolar a página, loja de pedidos e painel de administração para uma fazenda de abacates em Corrientes. O servidor valida preços e estoque e aceita pagamento com Mercado Pago ou transferência. A demo usa produtos e preços de exemplo." },
   },
   stack: {
     heading: "Stack técnico",
