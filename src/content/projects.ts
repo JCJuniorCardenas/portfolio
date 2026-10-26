@@ -11,7 +11,7 @@ export type ProjectBase = {
 
 // Datos que no cambian según el idioma. Los textos están en es.ts / pt.ts.
 export const projectsBase: ProjectBase[] = [
-  { id: "clinica-turnos", codeUrl: "https://github.com/JCJuniorCardenas/clinica-turnos", image: "/previews/clinica-turnos.jpg", imagePosition: "top", tags: ["NestJS", "Next.js", "TypeScript", "PostgreSQL", "Prisma", "Groq + Gemini", "WhatsApp API"] },
+  { id: "clinica-turnos", demoUrl: "https://web-production-2181c.up.railway.app/", codeUrl: "https://github.com/JCJuniorCardenas/clinica-turnos", image: "/previews/clinica-turnos.jpg", imagePosition: "left top", tags: ["NestJS", "Next.js", "TypeScript", "PostgreSQL", "Prisma", "Groq + Gemini", "WhatsApp API"] },
   { id: "whatsapp-bot", codeUrl: "https://github.com/JCJuniorCardenas/whatsapp-ai-bot", image: "/previews/whatsapp-bot.jpg", imagePosition: "center", tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Gemini AI", "WhatsApp API", "Jest"] },
   { id: "team-acebal", demoUrl: "https://frontend-beta-seven-77.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/team-acebal", image: "/previews/team-acebal.jpg", imagePosition: "top", tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT", "React"] },
   { id: "registro-financiero", demoUrl: "https://gestion-de-gastos-ten.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/Gestion-de-gastos", image: "/previews/registro-financiero.jpg", imagePosition: "top", tags: ["NestJS", "TypeScript", "PostgreSQL", "JWT"] },

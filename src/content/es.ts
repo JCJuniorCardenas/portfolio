@@ -21,7 +21,7 @@ export const es = {
   },
   projectsSection: { heading: "Proyectos seleccionados", demo: "Ver Demo ↗", code: "Ver Código ↗", previewOf: "Preview de", defaultLabel: "Proyecto" },
   projects: {
-    "clinica-turnos": { title: "Clínica Turnos — Agenda con IA", label: "Proyecto", description: "Agenda para clínicas con asistente de WhatsApp con IA y panel web en vivo. La IA solo propone: el backend valida cada acción y pide confirmación. Un índice único en PostgreSQL evita la doble reserva y cada clínica ve solo sus datos, con tests de concurrencia y de aislamiento." },
+    "clinica-turnos": { title: "Clínica Turnos — Agenda con IA", label: "Proyecto", description: "Agenda para clínicas con asistente de WhatsApp con IA y panel web en vivo. La IA solo propone: el backend valida cada acción y pide confirmación. Un índice único en PostgreSQL evita la doble reserva y cada clínica ve solo sus datos, con tests de concurrencia y de aislamiento.", note: ["Usuario de prueba (rol doctor)", "doctor@demo.test", "clave: Doc-xjlc6hvehEA6"] },
     "whatsapp-bot": { title: "WhatsApp Bot con IA — Turnos", label: "Proyecto", description: "Bot de WhatsApp que agenda turnos entendiendo lenguaje natural con IA (Gemini). La IA propone y el código decide: reservar o cancelar exige un “sí” de la persona. Webhook de Meta con firma validada, evaluación reproducible de la IA y más de 200 tests." },
     "team-acebal": { title: "Team Acebal — Gestión de Academia", label: "Proyecto", description: "Plataforma multi-usuario para academias de artes marciales — alumnos, pagos y graduaciones con dashboard de vencimientos. Auth JWT, registro público con verificación por email y migraciones reales sobre PostgreSQL." },
     "registro-financiero": { title: "Registro Financiero", label: "Proyecto", description: "App full-stack de gestión financiera personal — gastos e ingresos por categorías, con auth JWT." },
@@ -29,7 +29,7 @@ export const es = {
     "el-vasco": { title: "El Vasco — Turnos", label: "Proyecto", description: "Sistema de reservas de turnos online para barbería, con experiencia tipo app (PWA)." },
     trackifly: { title: "TrackiFly", label: "Proyecto colaborativo", description: "Plataforma logística y de envíos. Backend con perfiles, pedidos masivos, tiempo real, Mercado Pago y auth dual." },
     "palta-landing": { title: "Los 108 — Landing y tienda de paltas", label: "Proyecto", description: "Landing con animaciones al scroll, tienda de pedidos y panel de administración para un campo de paltas de Corrientes. El servidor valida precios y stock, y admite pago con Mercado Pago o transferencia. La demo usa productos y precios de ejemplo." },
-  } as Record<ProjectId, { title: string; label: string; description: string }>,
+  } as Record<ProjectId, { title: string; label: string; description: string; note?: string[] }>,
   stack: {
     heading: "Stack técnico",
     categories: ["Backend", "Frontend", "Bases de datos", "Cloud & DevOps", "Integraciones", "Testing"],

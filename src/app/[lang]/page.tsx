@@ -62,6 +62,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 <span className="project-label">{text.label}</span>
                 <h3>{text.title}</h3>
                 <p>{text.description}</p>
+                {text.note && <p className="demo-note">{text.note.map((line) => <span key={line}>{line}</span>)}</p>}
                 <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
                 <div className="project-actions">
                   {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">{t.projectsSection.demo}</a>}

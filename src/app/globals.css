@@ -59,6 +59,11 @@ body{font-family:var(--font-space-grotesk),sans-serif}.nav-links,.nav-cta,.eyebr
 .lang-switch a[aria-current="true"]{color:#c8ff43;border-color:#363a35}
 @media(max-width:700px){.nav-right{gap:10px}.nav-cta{padding:8px 10px}}
 
+/* Datos de acceso de una demo con login */
+.project-content .demo-note{margin:-6px 0 18px;padding:10px 12px;border:1px dashed #4b514a;color:#e5e5e5;font:12px/1.6 'DM Mono',monospace}
+.project-content .demo-note span{display:block}
+.project-content .demo-note span:first-child{color:#92958e}
+
 /* Si la cantidad de proyectos es impar, el último ocupa todo el ancho (imagen a la izquierda).
    Las filas de a pares siguen con la misma altura; la última se ajusta a su contenido. */
 @media(min-width:701px){
