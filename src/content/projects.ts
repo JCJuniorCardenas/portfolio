@@ -1,4 +1,4 @@
-export type ProjectId = "clinica-turnos" | "team-acebal" | "registro-financiero" | "jamby" | "el-vasco" | "trackifly" | "palta-landing";
+export type ProjectId = "clinica-turnos" | "automotores-batalla" | "team-acebal" | "registro-financiero" | "jamby" | "el-vasco" | "trackifly" | "palta-landing";
 
 export type ProjectBase = {
   id: ProjectId;
@@ -12,6 +12,7 @@ export type ProjectBase = {
 // Datos que no cambian según el idioma. Los textos están en es.ts / pt.ts.
 export const projectsBase: ProjectBase[] = [
   { id: "clinica-turnos", demoUrl: "https://web-production-2181c.up.railway.app/", codeUrl: "https://github.com/JCJuniorCardenas/clinica-turnos", image: "/previews/clinica-turnos.jpg", imagePosition: "left top", tags: ["NestJS", "Next.js", "TypeScript", "PostgreSQL", "Prisma", "Groq + Gemini", "WhatsApp API"] },
+  { id: "automotores-batalla", demoUrl: "https://automotores-batalla-production.up.railway.app/", codeUrl: "https://github.com/JCJuniorCardenas/automotores-batalla", image: "/previews/automotores-batalla.jpg", imagePosition: "top", tags: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS", "Docker"] },
   { id: "team-acebal", demoUrl: "https://frontend-beta-seven-77.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/team-acebal", image: "/previews/team-acebal.jpg", imagePosition: "top", tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT", "React"] },
   { id: "registro-financiero", demoUrl: "https://gestion-de-gastos-ten.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/Gestion-de-gastos", image: "/previews/registro-financiero.jpg", imagePosition: "top", tags: ["NestJS", "TypeScript", "PostgreSQL", "JWT"] },
   { id: "jamby", demoUrl: "https://ecommerce-jcjunior-cardenas.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/ecommerce-jcjunior-cardenas", image: "/previews/jamby.jpg", imagePosition: "center 30%", tags: ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "JWT", "Jest"] },
