@@ -1,4 +1,4 @@
-export type ProjectId = "clinica-turnos" | "automotores-batalla" | "team-acebal" | "registro-financiero" | "jamby" | "el-vasco" | "trackifly" | "palta-landing";
+export type ProjectId = "clinica-turnos" | "automotores-batalla" | "team-acebal" | "registro-financiero" | "jamby" | "fabian-diaz" | "trackifly" | "palta-landing";
 
 export type ProjectBase = {
   id: ProjectId;
@@ -16,7 +16,7 @@ export const projectsBase: ProjectBase[] = [
   { id: "team-acebal", demoUrl: "https://frontend-beta-seven-77.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/team-acebal", image: "/previews/team-acebal.jpg", imagePosition: "top", tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT", "React"] },
   { id: "registro-financiero", demoUrl: "https://gestion-de-gastos-ten.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/Gestion-de-gastos", image: "/previews/registro-financiero.jpg", imagePosition: "top", tags: ["NestJS", "TypeScript", "PostgreSQL", "JWT"] },
   { id: "jamby", demoUrl: "https://ecommerce-jcjunior-cardenas.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/ecommerce-jcjunior-cardenas", image: "/previews/jamby.jpg", imagePosition: "center 30%", tags: ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "JWT", "Jest"] },
-  { id: "el-vasco", demoUrl: "https://barberia-turnos-chi.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/barberia-turnos", image: "/previews/el-vasco.jpg", imagePosition: "center 70%", tags: ["NestJS", "React", "PostgreSQL", "PWA"] },
+  { id: "fabian-diaz", demoUrl: "https://barberia-turnos-chi.vercel.app/", codeUrl: "https://github.com/JCJuniorCardenas/barberia-turnos", image: "/previews/fabian-diaz.png", imagePosition: "top", tags: ["NestJS", "React", "PostgreSQL", "PWA"] },
   { id: "trackifly", demoUrl: "https://front-tracki-fly-zts5.vercel.app/es", codeUrl: "https://github.com/JCJuniorCardenas/Back-TrackiFly", image: "/previews/trackifly.jpg", imagePosition: "top", tags: ["NestJS", "TypeScript", "PostgreSQL", "Mercado Pago", "WebSockets"] },
   { id: "palta-landing", demoUrl: "https://palta-landing-production.up.railway.app/", codeUrl: "https://github.com/JCJuniorCardenas/palta-landing", image: "/previews/palta-landing.jpg", imagePosition: "left center", tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "PostgreSQL", "Mercado Pago"] },
 ];
